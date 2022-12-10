@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mua điện thoại</title>
+    <link rel="icon" type="image/x-icon" href="/Assets/img/banner-xiaomi-12.jpg">
+
+    <script src="~/Assets/lib/jquery3/jquery.min.js"></script>
+    <link href="~/Assets/lib/bootstrap4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script src="~/Assets/lib/bootstrap4/js/bootstrap.min.js"></script>
+
+
+    <link href="~/Assets/scss/home_page.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar navbar-expand-sm bg-white">
+            <a href="trang-chu">
+                <div class="logo">
+                    <img class="logo-img" src="https://logoart.vn/blog/wp-content/uploads/2013/09/thiet-ke-logo-dien-thoai-1.png" alt="logo" />
+                </div>
+            </a>
+
+            <i class='bx bx-menu menu-mobile' id="menu-mobile" onclick="menu()"></i>
+
+            <div class="input-group rounded ">
+                <input type="search" class="form-control rounded" id = "search" placeholder="Bạn cần tìm gì..." aria-label="Search" aria-describedby="search-addon" />
+                <span class="input-group-text border-0" id="search-addon" onclick="search()">
+                    <i class='bx bx-search'></i>
+                </span>
+            </div>
+
+            <i class='bx bx-menu menu-tablet' id="menu-tablet" onclick="menu()"></i>
+
+            <div class="index1">
+                <a href="lien-lac">
+                    <i class='bx bx-phone-call'></i>
+                    <p>Hotline mua hàng<br /><b>1900.63.39.09</b></p>
+                </a>
+            </div>
+
+            <div class="index">
+                <a href="cart">
+                    <i class='bx bx-cart'></i>
+                    <p>Chi tiết<br /><b>Giỏ hàng</b></p>
+                </a>
+
+            </div>
+
+            <div class="index">
+                <a href="bao-hanh">
+                    <i class='bx bx-donate-heart'></i>
+                    <p>Chính sách<br /><b>Bảo hành</b></p>
+                </a>
+
+
+            </div>
+
+            <div class="index">
+                <i class='bx bx-user-circle'></i>
+                <p>Thông tin<br /><b>Tài khoản</b></p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <hr />
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+    <div></div>
+
+    <footer>
+        <div class="infor-help">
+            <b>THÔNG TIN HỖ TRỢ</b> <br />
+            <a href="#">Chính sách bảo hành</a> <br />
+            <a href="#">Chính sách bảo hành iPhone - iPad</a> <br />
+            <a href="#">Bảo hành Xiaomi chính hãng</a> <br />
+            <a href="Chính sách mua hàng online">Chính sách mua hàng online</a> <br />
+            <a href="#">Mua hàng trả góp</a> <br />
+            <a href="#">Chính sách bảo mật thông tin khách hàng</a> <br />
+        </div>
+
+
+
+        <div class="infor-contact">
+            <b>THÔNG TIN LIÊN LẠC</b><br />
+            <a href="#">Hotline bán hàng:</a><br />
+            <b>0966 06 2468</b><br />
+
+            <b>1900 633 471</b><br />
+
+            <a href="#">Hotline bảo hành kĩ thuật:<br /><b>1900 633 471</b></a><br />
+            <a href="#">Hotline hỗ trợ phần mềm: <br /><b>096 282 4422</b></a><br />
+            <a href="#">Hotline phản ánh chất lượng dịch vụ:<br /><b style="color:red">1900 633 471</b></a><br />
+        </div>
+
+        <div class="store">
+
+            <input type="radio" id="mien_bac" name="mien" checked onclick="area()" /> Miền Bắc
+            <input type="radio" id="mien_trung" name="mien" onclick="area() " /> Miền Trung
+            <input type="radio" id="mien_nam" name="mien" onclick="area()" /> Miền Nam
+
+            <hr />
+
+            <div id="area">
+                addadada
+            </div>
+
+            <script>area();</script>
+
+        </div>
+    </footer>
+
+    <div class="contact-bar">
+        <a href="https://zalo.me/pc">
+            <img src="data:image/png;base64,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" alt="Alternate Text" />
+            <p>Chat Zalo</p>
+        </a>
+
+        <a href="tel:0974758821">
+            <img src="https://png.pngtree.com/png-vector/20191119/ourmid/pngtree-phone-icon-isolated-on-abstract-background-png-image_2001593.jpg" alt="Alternate Text" />
+            <p>Gọi Hotline</p>
+        </a>
+
+        <a href="https://www.facebook.com/messages/t/100046936204433">
+            <img src="data:image/jpeg;base64,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" alt="Alternate Text" />
+            <p>Messenger</p>
+        </a>
+    </div>
+
+    <div class="sub-menu" id="sub-menu">
+        <hr />
+        <div class="sub-menu-2">
+            <a href="trang-chu">
+                <i class='bx bx-home-alt'></i>
+                <b><p>Trang chủ</p></b>
+            </a>
+        </div>
+        <hr />
+
+        <div class="sub-menu-2">
+            <a href="lien-lac">
+                <i class='bx bx-phone-call'></i>
+                <b><p>Hotline mua hàng</p></b>
+            </a>
+        </div>
+        <hr />
+        <div class="sub-menu-2">
+            <a href="cart">
+                <i class='bx bx-cart'></i>
+                <b><p>Chi tiết giỏ hàng</p></b>
+            </a>
+
+        </div>
+        <hr />
+        <div class="sub-menu-2">
+            <a href="bao-hanh">
+                <i class='bx bx-donate-heart'></i>
+                <b>Chính sách bảo hành</b>
+            </a>
+
+
+        </div>
+        <hr />
+        <div class="sub-menu-2">
+            <a href="#">
+                <i class='bx bx-user-circle'></i>
+                <p><b>Thông tin tài khoản</b></p>
+            </a>
+            <div class="sub-menu-3">
+                <hr />
+                <a href="#">
+                    <b>Đăng kí</b>
+                </a>
+                <hr />
+                <a href="#">
+                    <b>Đăng nhập</b>
+                </a>
+                <hr />
+            </div>
+        </div>
+        <hr />
+
+        
+    </div>
+
+    <hr />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
