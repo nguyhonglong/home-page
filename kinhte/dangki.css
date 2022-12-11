@@ -1,0 +1,13 @@
+.dangki{
+    width: 300px;
+    margin: 50px auto;
+   
+}
+
+#dangnhap{
+    color: black;
+}
+
+#dangnhap:hover{
+    text-decoration: none;
+}
