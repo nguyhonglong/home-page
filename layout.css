@@ -130,6 +130,7 @@ header > p {
 footer{
     display: flex;
     background-color: black;
+    height: fit-content;
 }
 
 .ft1{
