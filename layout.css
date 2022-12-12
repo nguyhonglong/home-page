@@ -89,7 +89,7 @@ header > p {
 
 
 .product{
-    width: 22%;
+    width: 45vh;
     display: inline-block;
     margin: 23px;
 }
@@ -150,4 +150,23 @@ footer{
 
 .product > img:hover{
     transform: scale(1.2);
+}
+
+.dep-trai{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: solid black 2px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: auto;
+}
+
+.dep-trai > p{
+    
+    margin:10px auto;
+}
+.dep-trai:hover{
+    background-color: black;
+    color: aliceblue;
 }
