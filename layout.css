@@ -89,7 +89,7 @@ header > p {
 
 
 .product{
-    width: 45vh;
+    width: 44vh;
     display: inline-block;
     margin: 23px;
 }
@@ -130,7 +130,8 @@ header > p {
 footer{
     display: flex;
     background-color: black;
-    height: fit-content;
+    height: 400px;
+    overflow: hidden;
 }
 
 .ft1{
