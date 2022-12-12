@@ -170,3 +170,8 @@ footer{
     background-color: black;
     color: aliceblue;
 }
+
+.giathue{
+    text-decoration: line-through;
+    margin-right: 10px;
+}
